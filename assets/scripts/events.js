@@ -72,11 +72,33 @@ const userUpdateReview = function (event) {
     .catch(ui.userUpdateReviewFailure)
 }
 
+const userShowReviews = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+
+  const data = getFormFields(form)
+
+  api.showReviews(data)
+    .then(ui.showReviewsSuccess)
+    .catch(ui.showReviewsFailure)
+}
+
+const userDeleteReview = function () {
+  event.preventDefault()
+
+  api.deleteReview()
+    .then(ui.deleteReviewSuccess)
+    .catch(ui.deleteReviewFailure)
+}
+
 module.exports = {
   userSignUp,
   userSignIn,
   changePass,
   userSignOut,
   userSubmitReview,
-  userUpdateReview
+  userUpdateReview,
+  userShowReviews,
+  userDeleteReview
 }

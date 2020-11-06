@@ -60,11 +60,33 @@ const updateReview = function (data) {
   })
 }
 
+const showReviews = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/reviews',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'GET'
+  })
+}
+
+const deleteReview = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/reviews/:id',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'DELETE'
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   passChange,
   signOut,
   reviewSubmit,
-  updateReview
+  updateReview,
+  showReviews,
+  deleteReview
 }

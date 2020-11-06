@@ -65,6 +65,22 @@ const userUpdateReviewFailure = function () {
   $('#message').text('Sorry we could not update your review, please try again.')
 }
 
+const showReviewsSuccess = function () {
+  $('#message').text('Here are the reviews you have posted.')
+}
+
+const showReviewsFailure = function () {
+  $('#message').text('Could not retrieve your reviews.')
+}
+
+const deleteReviewSuccess = function () {
+  $('#message').text('We have removed that review.')
+}
+
+const deleteReviewFailure = function () {
+  $('#message').text('We could not remove that review, please try again.')
+}
+
 module.exports = {
   userSignUpSuccess,
   userSignUpFailure,
@@ -77,5 +93,9 @@ module.exports = {
   reviewSubmitSuccess,
   reviewSubmitFailure,
   userUpdateReviewSuccess,
-  userUpdateReviewFailure
+  userUpdateReviewFailure,
+  showReviewsSuccess,
+  showReviewsFailure,
+  deleteReviewSuccess,
+  deleteReviewFailure
 }

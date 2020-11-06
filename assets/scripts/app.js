@@ -11,4 +11,6 @@ $(() => {
   $('#user-sign-out').hide()
   $('#user-submit-review').on('submit', events.userSubmitReview)
   $('#user-update-review').on('submit', events.userUpdateReview)
+  $('#user-show-reviews').on('submit', events.userShowReviews)
+  $('#user-delete-review').on('submit', events.userDeleteReview)
 })
