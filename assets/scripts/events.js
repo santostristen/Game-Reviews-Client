@@ -48,9 +48,35 @@ const userSignOut = function (event) {
     .catch(ui.userSignOutFailure)
 }
 
+const userSubmitReview = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+
+  const data = getFormFields(form)
+
+  api.reviewSubmit(data)
+    .then(ui.reviewSubmitSuccess)
+    .catch(ui.reviewSubmitFailure)
+}
+
+const userUpdateReview = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+
+  const data = getFormFields(form)
+
+  api.updateReview(data)
+    .then(ui.userUpdateReviewSuccess)
+    .catch(ui.userUpdateReviewFailure)
+}
+
 module.exports = {
   userSignUp,
   userSignIn,
   changePass,
-  userSignOut
+  userSignOut,
+  userSubmitReview,
+  userUpdateReview
 }

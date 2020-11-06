@@ -49,6 +49,22 @@ const userSignOutFailure = function () {
   $('#message').text('Could not sign you out, please try again.')
 }
 
+const reviewSubmitSuccess = function () {
+  $('#message').text('You have posted your review, thank you!')
+}
+
+const reviewSubmitFailure = function () {
+  $('#message').text('Sorry, we couldnt post your review, please try again.')
+}
+
+const userUpdateReviewSuccess = function () {
+  $('#message').text('You have updated your review.')
+}
+
+const userUpdateReviewFailure = function () {
+  $('#message').text('Sorry we could not update your review, please try again.')
+}
+
 module.exports = {
   userSignUpSuccess,
   userSignUpFailure,
@@ -57,5 +73,9 @@ module.exports = {
   changePassSuccess,
   changepassFailure,
   userSignOutSuccess,
-  userSignOutFailure
+  userSignOutFailure,
+  reviewSubmitSuccess,
+  reviewSubmitFailure,
+  userUpdateReviewSuccess,
+  userUpdateReviewFailure
 }

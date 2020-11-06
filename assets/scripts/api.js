@@ -30,7 +30,7 @@ const passChange = function (data) {
   })
 }
 
-const signOut = function (data) {
+const signOut = function () {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     headers: {
@@ -40,9 +40,31 @@ const signOut = function (data) {
   })
 }
 
+const reviewSubmit = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/reviews',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'POST'
+  })
+}
+
+const updateReview = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/reviews',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'PATCH'
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   passChange,
-  signOut
+  signOut,
+  reviewSubmit,
+  updateReview
 }
