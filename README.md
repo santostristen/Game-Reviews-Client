@@ -12,7 +12,7 @@ I started this project by sorting out all of the user functions. I was able to g
     2. As a user I want to be able to sign in with what I signed up with.
     3. As a user I want to be able to change my password if needed.
     4. As a user I want to be able to post my reviews
-    5. As a user I want to be able to see the reviews I have posted
+    5. As a user I want to be able to see the reviews I have posted.
 
 # Technologies Used
   1. jQuery
