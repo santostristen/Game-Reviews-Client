@@ -46,17 +46,20 @@ const reviewSubmit = function (data) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    method: 'POST'
+    method: 'POST',
+    data: data
   })
 }
 
 const updateReview = function (data) {
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + '/reviews',
+    url: config.apiUrl + '/reviews/' + data._id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    method: 'PATCH'
+    method: 'PATCH',
+    data: data
   })
 }
 
@@ -66,7 +69,8 @@ const showReviews = function (data) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    method: 'GET'
+    method: 'GET',
+    data: data
   })
 }
 

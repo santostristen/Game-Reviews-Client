@@ -1,6 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 
+
 h1 {
+  font-style: italic;
   text-align: center;
 }
 
@@ -8,4 +10,8 @@ textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+body {
+  background-color: #ff0000;
 }

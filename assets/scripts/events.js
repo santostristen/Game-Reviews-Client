@@ -66,6 +66,7 @@ const userUpdateReview = function (event) {
   const form = event.target
 
   const data = getFormFields(form)
+  console.log('eventdata is', data)
 
   api.updateReview(data)
     .then(ui.userUpdateReviewSuccess)

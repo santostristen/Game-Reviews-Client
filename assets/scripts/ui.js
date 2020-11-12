@@ -19,6 +19,10 @@ const userSignInSuccess = function (response) {
   $('#user-sign-out').show()
   $('#user-sign-up').hide()
   $('#user-sign-in').hide()
+  $('#user-submit-review').show()
+  $('#user-update-review').show()
+  $('#user-show-reviews').show()
+  $('#user-delete-review').show()
   store.user = response.user
 }
 
@@ -42,6 +46,10 @@ const userSignOutSuccess = function () {
   $('#user-sign-in').show()
   $('#change-password').hide()
   $('#user-sign-out').hide()
+  $('#user-submit-review').hide()
+  $('#user-update-review').hide()
+  $('#user-show-reviews').hide()
+  $('#user-delete-review').hide()
   store.user = null
 }
 
@@ -51,6 +59,7 @@ const userSignOutFailure = function () {
 
 const reviewSubmitSuccess = function () {
   $('#message').text('You have posted your review, thank you!')
+  $('form').trigger('reset')
 }
 
 const reviewSubmitFailure = function () {
@@ -59,14 +68,24 @@ const reviewSubmitFailure = function () {
 
 const userUpdateReviewSuccess = function () {
   $('#message').text('You have updated your review.')
+  $('form').trigger('reset')
 }
 
 const userUpdateReviewFailure = function () {
   $('#message').text('Sorry we could not update your review, please try again.')
 }
 
-const showReviewsSuccess = function () {
+const showReviewsSuccess = function (response) {
+  console.log(response)
   $('#message').text('Here are the reviews you have posted.')
+  const showAllReviews = (`
+    <h3>Title: ${response.reviews}</h3>
+      <p>Text: ${response.reviews}</p>
+      <p>Rating: ${response.reviews}</p>
+      <p>ID: ${response.reviews}</p>
+      <br>
+      `)
+  $('#message').append(showAllReviews)
 }
 
 const showReviewsFailure = function () {

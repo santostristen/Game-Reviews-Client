@@ -79,9 +79,16 @@
               <legend>Write out your review with ratings.</legend>
 
               <label for="review-title">Game Being Reviewed</label>
+              <input class="review" type="text" name="review[title]" placeholder="Game Title">
 
-              <textarea rows="8" cols="75"></textarea>
-              <input class="review" type="submit" value="Post Review!">
+              <label for="review-text">Your Thoughts</label>
+              <input class="review" type="text" name="review[text]" placeholder="Your review">
+
+              <label for="review-rating">Score 1-10</label>
+              <input class="review" type="number" name="review[rating]">
+
+              <input type="submit" value="Post Review">
+
 
             </fieldset>
           </form>
@@ -89,12 +96,18 @@
       <section>
         <form id="user-update-review">
           <fieldset>
-            <legend>Played more of a game you reviewed? Update your review here.</legend>
+            <legend>Played more of a game you have already reviewed? Update your review here.</legend>
 
-            <label for="updating-game">Put your new thoughts here.</label>
+            <label for="new-password">Review ID</label>
+            <input id="review-id" type="text" name="_id" placeholder="Review ID">
 
-            <textarea rows="4" cols="75"></textarea>
-            <input class="update" type="submit" value="Update Review!">
+            <label for="new-password">Update Here</label>
+            <input id="new-text" type="text" name="text[new]" placeholder="Updated Review">
+
+            <label for="new-password">Change the Score</label>
+            <input id="new-rating" type="number" name="rating[new]" placeholder="Updated Rating">
+
+            <input type="submit" value="Update Review">
 
           </fieldset>
         </form>
