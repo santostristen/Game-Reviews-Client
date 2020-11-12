@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Quick Game Reviews</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Speed Running Game Reviews</h1>
+      <p id="message"></p>
+        <section>
+          <form id="user-sign-up">
+            <fieldset>
+              <legend>Sign Up!</legend>
+
+              <label for="sign-up-email">E-Mail</label>
+              <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email">
+
+              <label for="sign-up-password">Password</label>
+              <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password">
+
+              <label for="sign-up-password_confirmation">Password Confirmation</label>
+              <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+
+              <input type="submit" value="Sign Up!">
+            </fieldset>
+          </form>
+        </section>
+        <section>
+          <form id="user-sign-in">
+            <fieldset>
+              <legend>Sign In to Submit your Reviews</legend>
+
+              <label for="sign-in-email">Email</label>
+              <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email">
+
+              <label for="sign-in-password">Password</label>
+              <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password">
+
+              <input type="submit" value="Sign In!">
+            </fieldset>
+          </form>
+        </section>
+        <section>
+          <form id="change-password">
+            <fieldset>
+              <legend>You can change your Password here.</legend>
+
+              <label for="old-password">Old Password</label>
+              <input id="old-password" type="password" name="passwords[old]" placeholder="Old Passsword">
+
+              <label for="new-password">New Password</label>
+              <input id="new-password" type="password" name="passwords[new]" placeholder="New Password">
+
+              <input type="submit" value="Change Password!">
+            </fieldset>
+          </form>
+        </section>
+        <section>
+          <form id="user-submit-review">
+            <fieldset>
+              <legend>Write out your review with ratings.</legend>
+
+              <label for="review-title">Game Being Reviewed</label>
+              <input class="review" type="text" name="review[title]" placeholder="Game Title">
+
+              <label for="review-text">Your Thoughts</label>
+              <input class="review" type="text" name="review[text]" placeholder="Your review">
+
+              <label for="review-rating">Score 1-10</label>
+              <input class="review" type="number" name="review[rating]">
+
+              <input type="submit" value="Post Review">
+
+
+            </fieldset>
+          </form>
+        </section>
+        <section>
+          <form id="user-show-reviews">
+            <fieldset>
+              <legend>See the reviews you have posted. Save your review IDs!</legend>
+
+              <input class="show" type="submit" value="Show Reviews">
+
+            </fieldset>
+          </form>
+        </section>
+      <section>
+        <form id="user-update-review">
+          <fieldset>
+            <legend>Played more of a game you have already reviewed? Update your review here with your review ID.</legend>
+
+            <label for="new-password">Review ID</label>
+            <input id="review-id" type="text" name="_id" placeholder="Review ID">
+
+            <label for="new-password">Update Here</label>
+            <input id="new-text" type="text" name="text[new]" placeholder="Updated Review">
+
+            <label for="new-password">Change the Score</label>
+            <input id="new-rating" type="number" name="rating[new]" placeholder="Updated Rating">
+
+            <input type="submit" value="Update Review">
+
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <form id="user-sign-out">
+          <fieldset>
+            <legend>All done? Sign out here!</legend>
+
+            <label for="sign-out">Sign Out</label>
+            <input type="submit" value="Sign Out!">
+
+          </fieldset>
+        </form>
+      </section>
+    </body>
+</html>
