@@ -16935,7 +16935,7 @@ module.exports = {
 
 var apiUrl = void 0;
 var apiUrls = {
-  production: '<replace-with-heroku-url>',
+  production: 'https://calm-badlands-37817.herokuapp.com',
   development: 'http://localhost:4741'
 };
 
