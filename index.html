@@ -63,17 +63,6 @@
           </form>
         </section>
         <section>
-          <form id="user-sign-out">
-            <fieldset>
-              <legend>All done? Sign out here!</legend>
-
-              <label for="sign-out">Sign Out</label>
-              <input type="submit" value="Sign Out!">
-
-            </fieldset>
-          </form>
-        </section>
-        <section>
           <form id="user-submit-review">
             <fieldset>
               <legend>Write out your review with ratings.</legend>
@@ -93,10 +82,20 @@
             </fieldset>
           </form>
         </section>
+        <section>
+          <form id="user-show-reviews">
+            <fieldset>
+              <legend>See the reviews you have posted. Save your review IDs!</legend>
+
+              <input class="show" type="submit" value="Show Reviews">
+
+            </fieldset>
+          </form>
+        </section>
       <section>
         <form id="user-update-review">
           <fieldset>
-            <legend>Played more of a game you have already reviewed? Update your review here.</legend>
+            <legend>Played more of a game you have already reviewed? Update your review here with your review ID.</legend>
 
             <label for="new-password">Review ID</label>
             <input id="review-id" type="text" name="_id" placeholder="Review ID">
@@ -113,11 +112,12 @@
         </form>
       </section>
       <section>
-        <form id="user-show-reviews">
+        <form id="user-sign-out">
           <fieldset>
-            <legend>See the reviews you have posted.</legend>
+            <legend>All done? Sign out here!</legend>
 
-            <input class="show" type="submit" value="Show Reviews">
+            <label for="sign-out">Sign Out</label>
+            <input type="submit" value="Sign Out!">
 
           </fieldset>
         </form>

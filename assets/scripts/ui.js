@@ -78,7 +78,7 @@ const userUpdateReviewFailure = function () {
 const showReviewsSuccess = function (response) {
   $('#message').text('Here are the reviews you have posted.')
   const showAllReviews = (`
-    <h3>Title: ${response.reviews}</h3>
+    <p>Title: ${response.reviews}</p>
       <p>Text: ${response.reviews}</p>
       <p>Rating: ${response.reviews}</p>
       <p>ID: ${response.reviews}</p>
