@@ -52,7 +52,6 @@ const reviewSubmit = function (data) {
 }
 
 const updateReview = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/reviews/' + data._id,
     headers: {
