@@ -97,6 +97,7 @@ const showReviewsFailure = function () {
 
 const deleteReviewSuccess = function () {
   $('#message').text('We have removed that review.')
+  $('form').trigger('reset')
 }
 
 const deleteReviewFailure = function () {
