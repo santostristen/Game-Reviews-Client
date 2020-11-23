@@ -52,8 +52,9 @@ const reviewSubmit = function (data) {
 }
 
 const updateReview = function (data) {
+  console.log('data', data)
   return $.ajax({
-    url: config.apiUrl + '/reviews/' + data._id,
+    url: config.apiUrl + '/reviews/' + data.review._id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -68,14 +69,14 @@ const showReviews = function (data) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    method: 'GET',
-    data: data
+    method: 'GET'
   })
 }
 
 const deleteReview = function (data) {
+  console.log('del data', data)
   return $.ajax({
-    url: config.apiUrl + '/reviews/:id',
+    url: config.apiUrl + '/reviews/' + data.review._id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },

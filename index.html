@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Speed Running Game Reviews</h1>
+      <h1>Game Reviews by You!</h1>
       <p id="message"></p>
         <section>
           <form id="user-sign-up">
@@ -97,16 +97,32 @@
           <fieldset>
             <legend>Played more of a game you have already reviewed? Update your review here with your review ID.</legend>
 
-            <label for="new-password">Review ID</label>
-            <input id="review-id" type="text" name="_id" placeholder="Review ID">
+            <label for="review-id">Review ID</label>
+            <input id="review-id" type="text" name="review[_id]" placeholder="Review ID">
 
-            <label for="new-password">Update Here</label>
-            <input id="new-text" type="text" name="text[new]" placeholder="Updated Review">
+            <label for="new-review">New Title</label>
+            <input id="new-title" type="text" name="review[title]" placeholder="Updated Title">
 
-            <label for="new-password">Change the Score</label>
-            <input id="new-rating" type="number" name="rating[new]" placeholder="Updated Rating">
+            <label for="new-text">Update Here</label>
+            <input id="new-text" type="text" name="review[text]" placeholder="Updated Review">
+
+            <label for="new-rating">Change the Score</label>
+            <input id="new-rating" type="number" name="review[rating]" placeholder="Updated Rating">
 
             <input type="submit" value="Update Review">
+
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <form id="user-delete-review">
+          <fieldset>
+            <legend>Want to delete one of your reviews? Do so here.</legend>
+
+            <label for="delete-review-id">Review ID</label>
+            <input id="delete-review-id" type="text" name="review[_id]" placeholder="Review ID">
+
+            <input type="submit" value="Delete Review">
 
           </fieldset>
         </form>

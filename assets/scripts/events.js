@@ -3,6 +3,7 @@
 const getFormFields = require('./../../lib/get-form-fields')
 const ui = require('./ui')
 const api = require('./api')
+const store = require('./store')
 
 const userSignUp = function (event) {
   event.preventDefault()
@@ -87,7 +88,11 @@ const userShowReviews = function (event) {
 const userDeleteReview = function () {
   event.preventDefault()
 
-  api.deleteReview()
+  const form = event.target
+
+  const data = getFormFields(form)
+
+  api.deleteReview(data)
     .then(ui.deleteReviewSuccess)
     .catch(ui.deleteReviewFailure)
 }

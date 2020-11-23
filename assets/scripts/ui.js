@@ -66,25 +66,29 @@ const reviewSubmitFailure = function () {
   $('#message').text('Sorry, we couldnt post your review, please try again.')
 }
 
-const userUpdateReviewSuccess = function () {
+const userUpdateReviewSuccess = function (response) {
   $('#message').text('You have updated your review.')
   $('form').trigger('reset')
 }
 
-const userUpdateReviewFailure = function () {
+const userUpdateReviewFailure = function (response) {
   $('#message').text('Sorry we could not update your review, please try again.')
 }
 
 const showReviewsSuccess = function (response) {
+  const reviews = response.reviews
   $('#message').text('Here are the reviews you have posted.')
-  const showAllReviews = (`
-    <p>Title: ${response.reviews}</p>
-      <p>Text: ${response.reviews}</p>
-      <p>Rating: ${response.reviews}</p>
-      <p>ID: ${response.reviews}</p>
+  reviews.forEach(reviews => {
+    JSON.stringify(reviews, null, 2)
+    const showAllReviews = (`
+      <p>Title: ${reviews.title}</p>
+      <p>Text: ${reviews.text}</p>
+      <p>Rating: ${reviews.rating}</p>
+      <p>ID: ${reviews._id}</p>
       <br>
       `)
-  $('#message').append(showAllReviews)
+    $('#message').append(showAllReviews)
+  })
 }
 
 const showReviewsFailure = function () {
@@ -93,6 +97,7 @@ const showReviewsFailure = function () {
 
 const deleteReviewSuccess = function () {
   $('#message').text('We have removed that review.')
+  $('form').trigger('reset')
 }
 
 const deleteReviewFailure = function () {
