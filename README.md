@@ -22,7 +22,7 @@ I started this project by sorting out all of the user functions. I was able to g
 
 # To Be Completed
 
-Get requests respond with "object" instead of text, user can not delete their reviews.
+I would like to add to the styling of my application in the future, it is very minimal at the moment.
 
 # WireFrame
 
